@@ -5,3 +5,10 @@
 # премии в качестве значения. Сумма рассчитывается
 # как ставка умноженная на процент премии
 
+names = ['Pyotr', 'Josef', 'Abraham', 'Jericho']
+rates = [100_000, 200_000, 250_000, 500_000]
+bonuses = ['10.25%', '15.50%', '12.2%', '38.5%']
+
+dict_gen = {name: rate * float(bonus[:-1]) / 100 for name, rate, bonus in zip(names, rates, bonuses)}
+
+print(dict_gen)
